@@ -1,0 +1,15 @@
+.alert-danger {
+  border: 2px dotted red;
+  padding: 10px;
+  background-color: rgb(60, 2, 2);
+  color: white;
+  .alertheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
