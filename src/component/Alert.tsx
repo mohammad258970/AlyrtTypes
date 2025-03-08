@@ -1,18 +1,21 @@
 import "./index.scss";
 import { BellRing } from "lucide-react";
 import { CircleX } from "lucide-react";
+import { ReactNode } from "react";
 
 interface Iprobs {
+  type: string;
+  icon:ReactNode;
   title: string;
+  description: string;
 }
-const Alert = () => {
+const Alert = ({type,icon,title,description}:Iprobs) => {
   return (
-    <div className="alert-danger">
+    <div className={type}>
       <div className="alertheader">
         <div className="title">
-          <BellRing />
-
-          <h4> hello </h4>
+    {icon}
+          <h4> {title} </h4>
         </div>
 
         <span>
@@ -20,9 +23,7 @@ const Alert = () => {
         </span>
       </div>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
-        necessitatibus quae ratione praesentium facere sunt facilis voluptate
-        debitis earum dolore.
+        {description}
       </p>
       <span></span>
     </div>
